@@ -1,0 +1,26 @@
+.AdminSignup{
+    background-color: #2D3F4E;
+    height: 400px;
+    width: 700px;
+    margin-top: 150px;
+    margin-left: 350px;
+}
+.AdminSignup p{
+    font-size: 35px;
+    font-weight: 500;
+    color: white;
+    padding-left: 280px;
+    padding-top: 30px;
+}
+.AdminSignup input{
+margin-left: 150px;
+width: 400px;
+}
+.Button55 button{
+    margin-left: 200px;
+    margin-top: 20px;
+    width: 300px;
+
+    border: none;
+    background-color: none;
+}

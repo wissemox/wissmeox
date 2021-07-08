@@ -1,0 +1,21 @@
+/*  ml-20 */ @media screen and (max-width: 600px){
+    .ResposiveProduct{
+            margin-left: 50px;
+           
+    }
+    .Resposive02{
+        margin-left: 35px;
+    }
+   
+}
+.ClickHover:hover{
+    -webkit-transition: 2s;
+    background-color: #DBDBDB;
+    
+}
+.ClickHover{
+    cursor: pointer;
+}
+
+/*   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ */

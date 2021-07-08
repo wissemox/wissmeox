@@ -1,0 +1,7 @@
+export const REGISTER_USER = "REGISTER_USER"
+export const LOGIN_USER = "LOGIN_USER"
+export const ADMIN = "ADMIN"
+export const GETPRODUCT = "GETPRODUCT"
+export const LOGOUT = "LOGOUT"
+export const GETPRODUCTACHAT="GETPRODUCTACHAT"
+export const GET_CATGORIES = "GET_CATGORIES"
