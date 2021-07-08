@@ -12,10 +12,13 @@ app.use('/api/auth',auth)
 app.use('/api/Admin',Admin)
 app.use('/api/Product',Product)
 //Server
-const port = process.env.PORT || 5000 
+const PORT = process.env.PORT || 5000 
 
-app.listen(port , (error)=>{
+app.listen(PORT , (error)=>{
     error ? 
     console.log(error)
-    :console.log('the server is runnig on port' ,port)
+    :console.log('the server is runnig on port' ,PORT)
 })
+if(process.env.NODE_ENV==="production") {
+    app.use(express.static('client/build'))
+}
