@@ -30,7 +30,7 @@ const Menu = ({match}) => {
             <RecharcheBar data-Aos="fade" />
             <DenseAppBar MenuTogel={MenuTogel}/>
             <TogelMenu01 TogelMenu={TogelMenu}/>
-            <div data-Aos="fade" className="flex flex-wrap	">
+            <div style={{justifyContent:"center"}} data-Aos="fade" className="flex ml-10 flex-wrap mb-10	">
             {Product.filter((catgorie)=>catgorie.Catgory==match).map((el)=><ProductMap el={el}/>)}
             </div>
             

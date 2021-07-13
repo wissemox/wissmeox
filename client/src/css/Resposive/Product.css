@@ -1,4 +1,80 @@
-/*  ml-20 */ @media screen and (max-width: 600px){
+/*  ml-20 */
+@media screen and (max-width: 5500px){
+    .marginLeftResposive{
+        margin-left: 20px;
+    }
+    .marginLeftResposive01{
+        margin-left: 25%;
+    }
+    .hiddenCompenetRecherBar{
+        display: flex;
+    }
+}
+/*    .marginLeftResposive01{
+      margin-left: 10%;
+  } */
+@media screen and (max-width: 2000px){
+.marginLeftResposive01{
+    -webkit-transition: 2s;
+
+    margin-left: 25%;
+}
+}
+/*   .marginLeftResposive{
+    -webkit-transition: 2s;
+      margin-left: 500px;
+   } */
+   @media screen and (max-width: 1300px){
+   .marginLeftResposive01{
+    -webkit-transition: 2s;
+
+       margin-left: 240px;
+   }
+
+   
+}
+@media screen and (max-width: 1200px){
+    .marginLeftResposive01{
+        -webkit-transition: 2s;
+        margin-left: 220px;
+        
+    }
+ 
+    
+ }
+ @media screen and (max-width: 1100px){
+    .marginLeftResposive01{
+        -webkit-transition: 2s;
+        margin-left: 160px;
+    }
+ 
+    
+ }
+ @media screen and (max-width: 1000px){
+    .marginLeftResposive01{
+        -webkit-transition: 2s;
+        margin-left: 100px;
+    }
+    .hiddenCompenetRecherBar{
+        display: none;
+    }
+    
+ }
+ @media screen and (max-width: 900px){
+    .marginLeftResposive01{
+        -webkit-transition: 2s;
+        margin-left: 50px;
+    }
+ 
+    
+ }
+@media screen and (max-width: 600px){
+    .ml-14{
+        margin-left: 0px;
+    }
+    .marginLeftResposive{
+        margin-left: 0px;
+    }
     .ResposiveProduct{
             margin-left: 50px;
            

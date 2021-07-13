@@ -13,7 +13,7 @@ const TogelMenu01 = ({TogelMenu}) => {
 
     return (
         <div>
-            {TogelMenu ?  <Box  boxShadow={5} className="BoxShadow" style={{width:"20%" }} className="bg-white">
+            {TogelMenu ?  <Box  boxShadow={5} className="BoxShadow" style={{width:"20%" }} className="bg-white AnimaiionNavbarSticky">
           {Catgories&&Catgories.map((el)=>
           <>
           <div className="ml-2 mt-2 pt-2 p-3 pl-10">

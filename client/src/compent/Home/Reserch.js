@@ -23,7 +23,7 @@ const Reserch02 = ({match}) => {
             <RecharcheBar/>
             <DenseAppBar MenuTogel={MenuTogel}/>
             <TogelMenu01 TogelMenu={TogelMenu}/>
-            <div className="flex flex-wrap	">
+            <div style={{justifyContent:'center'}} className="flex flex-wrap ml-10	">
             {Product.filter((catgorie)=>catgorie.Name==match).map((el)=><ProductMap el={el}/>)}
     
             </div>

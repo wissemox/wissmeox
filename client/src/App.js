@@ -7,12 +7,16 @@ import {BrowserRouter ,Route} from 'react-router-dom'
 import Admin from './compent/Admin/Admin'
 import AdminDashBoard from './compent/Admin/AdminDashBoard'
 import Home from'./compent/Home/Home'
+
+
 import './css/Widht.css'
 import './css/Border.css'
 import './css/margin.css'
 import './css/Resposive/Navbar.css'
 import './css/Resposive/Crouseel.css'
 import './css/Resposive/Product.css'
+
+
 import Menu from './compent/Home/Menu'
 import Reserch02 from './compent/Home/Reserch'
 import ProductDetiled from './compent/Home/ProductDetiled'

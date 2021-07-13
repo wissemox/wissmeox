@@ -1,113 +1,85 @@
-import React,{useEffect} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
+import React,{useState} from 'react'
+import {Container , Box , Typography , IconButton , AppBar, Button  } from '@material-ui/core'
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import Box from '@material-ui/core/Box';
-import Aos from 'aos'
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import AlarmIcon from '@material-ui/icons/Alarm';
 import {Link} from 'react-router-dom'
-import "aos/dist/aos.css"
-const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
-  },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
-  },
-  avatar: {
-    backgroundColor: red[500],
-  },
-}));
+const ProductMap = ({el , i}) => {
+    // Rate Function here 
+    const[Rate , setRate]=useState(1)
+    const[togelTrue , setTogelTrue]=useState(false)
+    const [Numbedr , setNumber]=useState(0)
+    const GetNumber=()=>{
+      setNumber(i)
+      setTogelTrue(!togelTrue)
+    }
 
-export default function RecipeReviewCard({el}) {
-  const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-  useEffect(() => {
-    Aos.init({duration: 2000});
-  }, [])
-  return (
-    <Box  >
-<Box  boxShadow={6}  data-Aos="fade" className={`${classes.root} ml-14 mt-20 ResposiveProduct rounded-2xl  py-10	` }>
-        <Box >
+    {console.log(Numbedr)}
+    return (
+      <Box>
+        <Box style={{width:"320px" }}  boxShadow={3} className=" bg-white mr-10 mt-10 rounded-3xl scalAnimation	">
+            <Box style={{display:"flex", marginLeft:"20px"}}>
+              <Box>
         <Link style={{  textDecoration: "none", color:"black" }}  to={`/ProductDetiled/${el.Name}`}> 
 
-     <img  data-Aos="fade-left"  style={{width:"200px" ,height:"200px",marginLeft:"40px"}} src={process.env.PUBLIC_URL +`/uploads/${el.Image}` }/>
+     <img  data-Aos="fade-left"  style={{width:"150px" ,height:"150px",marginLeft:"70px" , marginTop:"20px", marginBottom:"20px"}} src={process.env.PUBLIC_URL +`/uploads/${el.Image}` }/>
      </Link>
-
      </Box>
-     
-          
-          <Box style={{width:"250px" , height:"150px"}} className="ml-4 mt-3 " >
-          <div className="flex text-xl 	">
-              <p style={{width:"60px"}} data-Aos="fade-right">Name:</p>
-          <p   className="pl-10"  data-Aos="fade-left">{el.Name}</p>
-          </div>
-          <div     data-Aos="fade" className="flex text-xl	 	">
-              <p  style={{width:"60px"}}  data-Aos="fade-left">Catgory:</p>
-          <p className="pl-10"  style={{width:"150px"}}data-Aos="fade-right">{el.Catgory}</p>
-          </div>
-          <div data-Aos="fade-left" className="flex text-xl		">
-            <Box className="flex w-11">
-              <p   style={{color:"white",width:"100px"}} className="bg-red rounded-3xl pl-2	"  data-Aos="fade-right">Prix:</p>
-          <p   style={{width:"150px"}} className="pl-5"     data-Aos="fade-left">{el.Prix}Dt</p>
-          </Box>
-          </div>
+     </Box>
+                <Box    className="absolute flex marginLeaftProfile mt-140  "> 
+                    
+                </Box>
+                <Box boxShadow={5} className="rounded-xl  ">
+                <Link style={{  textDecoration: "none", color:"black" }}  to={`/ProductDetiled/${el.Name}`}> 
 
+              </Link>
+
+                </Box>
+                 <Box >
+                    <Box style={{ height:"60px",marginLeft:"10px" , paddingBottom:"50px", paddingTop:"50px"}}>
+                    <Typography   className="font-semibold pb-10 f-20" variant="p">Product  : {el.Name}</Typography>
+                    </Box>
+                  
+                    <Box style={{marginLeft:"10px"}} className="pt-1 ">
+                        <Typography className="font-semibold	" variant="p">Etat :</Typography>
+                        <Typography  style={{color:"#9B9B9B" , fontWeight:"00"}} variant="p"> Parfait</Typography>
+                    </Box>
+                 
+                    <Box style={{color:"#BCBCBC" , height:"50px",marginLeft:"10px" }} className="flex pt-2">
+                        
+                        <Typography className="pr-4 f2-12"  variant="p"> <p>{el.Catgory}</p> </Typography>
+           
+        
+                    </Box>
+                 
+
+                    <Box  className="flex border-b-2	mr-4 ">
+                        <Box  style={{width:"40%" , marginLeft:"10px" , height:"30px"}} className="bg-red mt-3 rounded-full mb-3	">
+                        
+                    
+                           <Typography style={{color:"white" , marginLeft:"10px"}} className="f-14" variant="p">Prix : {el.Prix}Dt </Typography>
+                        </Box>
+                        <Box className="mt-3 ">
+                        </Box>
+                        
+                    </Box>
+                   
+                 
+                </Box>
+                <Box className="rounded-b-lg  text-center py-3	font-semibold	" style={{background:"#1F2649"}}>
+              
+              <Typography onClick={GetNumber} className="text-white  " variant="p">See more</Typography>
+            
+      </Box>
+ 
+        </Box>
+             {i===Numbedr && togelTrue && 
+              <Box style={{width:"320px",backgroundColor:"#f2f2f2" , padding:"10px"}} className="AnimaiionNavbarSticky">
+              <p>Descraption : {el.Descraption}</p>   
+              </Box>
+              }
           </Box>
-       
-  
-      <CardActions style={{height:"20px"}} disableSpacing>
-       
-    
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent className="mt-10">
-          <Typography  paragraph>Decaription:</Typography>
-          <Typography   paragraph>
-          {el.Descraption}
-          </Typography>
-         
-        </CardContent>
-      </Collapse>
-    </Box>
-    </Box>
-    
-  );
+    )
 }
+
+export default ProductMap

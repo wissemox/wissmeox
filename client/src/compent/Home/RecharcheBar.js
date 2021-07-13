@@ -21,7 +21,7 @@ const RecharcheBar = () => {
   }, [])
     return (
         <>
-    <Box className="flex mt-3 mb-3 ml-20p ">
+    <Box className="flex mt-3 mb-3 ml-20p   ">
 
 
      
@@ -34,7 +34,7 @@ const RecharcheBar = () => {
            </IconButton>
            </Box>
         </Box>
-        <Box data-Aos="fade"   boxShadow={5} style={{marginLeft:"30%" , marginBottom:"10px"}} className="w-600  ">
+        <Box data-Aos="fade"   boxShadow={5} style={{  marginBottom:"10px"}} className="w-600  marginLeftResposive01">
       
 
            {ReserchBar&&Product.filter((el)=>el.Name.toLocaleLowerCase().includes(ReserchBar.toLocaleLowerCase().trim())).map((el)=>
@@ -45,8 +45,8 @@ const RecharcheBar = () => {
                 <img style={{width:"80px" , marginRight:"50px"}} src={process.env.PUBLIC_URL +`/uploads/${el.Image}` }/>
 
                 <p  data-Aos="fade-left"  style={{width:"150px"}} >{el.Name}</p>
-                <p data-Aos="fade-left" style={{width:"100px"}} className="pl-20" >{el.Prix}</p>
-                <p data-Aos="fade-left" style={{width:"100px"}} className="pl-20">{el.Catgory}</p>
+                <p  data-Aos="fade-left" style={{width:"100px"}} className="pl-20 hiddenCompenetRecherBar" >{el.Prix}</p>
+                <p data-Aos="fade-left" style={{width:"100px"}} className="pl-20 hiddenCompenetRecherBar">{el.Catgory}</p>
                 </Box>
            </Box> 
            </Link> )}

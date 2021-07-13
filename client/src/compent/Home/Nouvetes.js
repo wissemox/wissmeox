@@ -9,15 +9,15 @@ const Nouvetes = () => {
     const breakPoints = [
         { width: 1, itemsToShow: 1 },
         { width: 550, itemsToShow: 2 },
-        { width: 768, itemsToShow: 3 },
-        { width: 1200, itemsToShow: 4 },
-        { width: 1600, itemsToShow: 5 },
+        { width: 608, itemsToShow: 3 },
+        { width: 700, itemsToShow: 4 },
+        { width: 800, itemsToShow: 5 },
       ];
       
     return (
         <div className="mt-10">
             <p>Nouveaux Produits</p>
-              <Carousel breakPoints={breakPoints}>
+              <Carousel className="px-10" breakPoints={breakPoints}>
                 
             {Product.slice(1).reverse().map((el)=><CarouselMap el={el}/>)}
         

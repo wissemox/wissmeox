@@ -22,9 +22,9 @@ const Product = () => {
     const Product = useSelector(state => state.ProductdALL.ProductAll)
     return (
         <div>
-            <div className="mt-10 mb-10 ml-14 font-semibold 	">
-             <div style={{width:"100%"}} className="flex flex-wrap Resposive02	">
-             {Product.map((el)=><ProductMap el={el}/>)}
+            <div className="mt-10 mb-10  ml-10 font-semibold 	">
+             <div style={{ justifyContent:"center"}} className="flex flex-wrap 	">
+             {Product.map((el , i)=><ProductMap el={el} i={i}/>)}
          
              </div>
              {/* <div style={{marginLeft:"50%" , marginTop:"5%"}}>
@@ -35,9 +35,9 @@ const Product = () => {
 
            
 
-            <div className="mt-10 mb-10  ml-25  font-semibold	">
+            <div className="mt-10 mb-10 ml-10    font-semibold	">
              <p>Smartphone</p>
-             <div className="flex flex-wrap	">
+             <div style={{justifyContent:"center" }} className="flex flex-wrap	">
              {Product.filter((catgorie)=>catgorie.Catgory=="smartphone").map((el)=><ProductMap el={el}/>)}
          
              </div>
