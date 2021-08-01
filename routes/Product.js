@@ -11,7 +11,7 @@ const AchatProduct = require('../model/ProductAchat')
 const Catgory =require('../model/Catgory')
 const storage=multer.diskStorage({
     destination:(req,file,callback)=>{
-        callback(null , "./client/public/uploads/")
+        callback(null , "./bigsat/client/public/uploads/")
     }, 
     filename:(req,file,callback)=>{
         callback(null , file.originalname)
